@@ -23,13 +23,13 @@ extension Person {
         
         var contactList: [Person] = []
         
-        let data = DataManager()
+        let data = DataManager.shared
         data.firstNameList.shuffle()
         data.lastNameList.shuffle()
         data.emailList.shuffle()
         data.phoneList.shuffle()
         
-        for item in 0...data.firstNameList.count - 1 {
+        for item in 0..<data.firstNameList.count {
             contactList.append(Person (
                 firstName: data.firstNameList[item],
                 lastName: data.lastNameList[item],
@@ -39,4 +39,9 @@ extension Person {
      
         return contactList
     }
+}
+
+enum Contacts: String {
+    case phone = "phone"
+    case email = "tray"
 }

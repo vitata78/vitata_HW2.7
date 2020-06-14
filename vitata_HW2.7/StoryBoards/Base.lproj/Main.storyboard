@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fcu-q8-2xx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--asd-->
+        <!--Details-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="9pv-A4-QxB" customClass="PersonDetailsViewController" customModule="vitata_HW2_7" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,16 +40,15 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
-                    <navigationItem key="navigationItem" title="asd" largeTitleDisplayMode="never" id="LLV-qw-iaX"/>
+                    <navigationItem key="navigationItem" title="Details" largeTitleDisplayMode="never" id="LLV-qw-iaX"/>
                     <connections>
                         <outlet property="emailLabel" destination="A5M-7J-77L" id="BKc-Tb-UrY"/>
-                        <outlet property="navBar" destination="LLV-qw-iaX" id="1jP-7B-4ks"/>
                         <outlet property="phoneLabel" destination="KQZ-1w-vlD" id="VKW-Sq-Ezb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2296" y="-315"/>
+            <point key="canvasLocation" x="1625" y="-328"/>
         </scene>
         <!--Persons List-->
         <scene sceneID="bPe-YR-vh8">
@@ -74,6 +73,7 @@
                             <outlet property="delegate" destination="ISe-h4-mUh" id="R7c-uS-Iuw"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Persons" image="person.fill" catalog="system" id="vey-SM-XHZ"/>
                     <navigationItem key="navigationItem" title="Persons List" id="fqi-JJ-Ufs"/>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="show" identifier="personDetailsSegue" id="EnZ-2l-JI9"/>
@@ -81,7 +81,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CiN-ED-mrs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1543" y="-315"/>
+            <point key="canvasLocation" x="774" y="-328"/>
         </scene>
         <!--Persons-->
         <scene sceneID="i08-sN-Hnz">
@@ -93,24 +93,56 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ISe-h4-mUh" kind="relationship" relationship="rootViewController" id="OQb-Gg-N0h"/>
+                        <segue destination="49e-Tb-3d3" kind="relationship" relationship="rootViewController" id="FgU-dG-2Dt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GHa-Wb-9o1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="-315"/>
+            <point key="canvasLocation" x="-938" y="0.0"/>
         </scene>
-        <!--Tab Bar View Controller-->
+        <!--Contacts List-->
+        <scene sceneID="f8m-5t-n3t">
+            <objects>
+                <tableViewController id="Awb-56-ZKg" customClass="ContactListTableTableViewController" customModule="vitata_HW2_7" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IJ6-k4-qQF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCell" id="at0-Jz-sAY">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="at0-Jz-sAY" id="cgi-o8-74q">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Awb-56-ZKg" id="wOu-dw-kt2"/>
+                            <outlet property="delegate" destination="Awb-56-ZKg" id="B5S-6G-eqt"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="book.fill" catalog="system" id="OrC-MU-hod"/>
+                    <navigationItem key="navigationItem" title="Contacts List" id="xkB-2H-2eR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jUW-dD-ElC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="372"/>
+        </scene>
+        <!--Persons List-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" customClass="TabBarViewController" customModule="vitata_HW2_7" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Persons List" id="gmA-wh-57I"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="fcu-q8-2xx" kind="relationship" relationship="viewControllers" id="sOS-Lv-3yg"/>
+                        <segue destination="ISe-h4-mUh" kind="relationship" relationship="viewControllers" id="SkN-TW-siS"/>
+                        <segue destination="Awb-56-ZKg" kind="relationship" relationship="viewControllers" id="Fsc-Yn-a89"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -119,7 +151,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book.fill" catalog="system" width="128" height="100"/>
         <image name="first" width="30" height="30"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
 </document>

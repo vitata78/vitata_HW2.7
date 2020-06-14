@@ -10,8 +10,14 @@ import UIKit
 
 
 class PersonListTableViewController: UITableViewController {
-    var persons = Person.getPersons()
-
+    
+    var persons: [Person] = []
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.topItem?.title = "Persons List"
+    }
+    
 
     // MARK: - Table view data source
 
@@ -29,7 +35,6 @@ class PersonListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
         let person = persons[indexPath.row]
         performSegue(withIdentifier: "personDetailsSegue", sender: person)
     }

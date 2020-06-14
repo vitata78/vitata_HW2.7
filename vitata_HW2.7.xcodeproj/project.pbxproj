@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		690F3BD8249589D100A25D4A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690F3BD7249589D100A25D4A /* TabBarViewController.swift */; };
+		692DB0FC24911EDC008F7397 /* ContactListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692DB0FB24911EDC008F7397 /* ContactListTableTableViewController.swift */; };
 		692EAD3D248F0EA500035522 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692EAD3C248F0EA500035522 /* AppDelegate.swift */; };
 		692EAD3F248F0EA500035522 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692EAD3E248F0EA500035522 /* SceneDelegate.swift */; };
 		692EAD41248F0EA500035522 /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692EAD40248F0EA500035522 /* PersonDetailsViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		690F3BD7249589D100A25D4A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		692DB0FB24911EDC008F7397 /* ContactListTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableTableViewController.swift; sourceTree = "<group>"; };
 		692EAD39248F0EA500035522 /* vitata_HW2.7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vitata_HW2.7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		692EAD3C248F0EA500035522 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		692EAD3E248F0EA500035522 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +52,8 @@
 			children = (
 				69535BF3249072B000A29EF6 /* PersonListTableViewController.swift */,
 				692EAD40248F0EA500035522 /* PersonDetailsViewController.swift */,
+				692DB0FB24911EDC008F7397 /* ContactListTableTableViewController.swift */,
+				690F3BD7249589D100A25D4A /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -195,6 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				690F3BD8249589D100A25D4A /* TabBarViewController.swift in Sources */,
+				692DB0FC24911EDC008F7397 /* ContactListTableTableViewController.swift in Sources */,
 				69535BED24906B6700A29EF6 /* Person.swift in Sources */,
 				69535BF224906CF800A29EF6 /* DataManager.swift in Sources */,
 				69535BF4249072B000A29EF6 /* PersonListTableViewController.swift in Sources */,
